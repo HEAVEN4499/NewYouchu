@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">邮储</string>
+    <string name="app_logo_yc">中国邮政储蓄银行</string>
+    <string name="cash_on_delivery_welcome">邮储到付</string>
+    <string name="action_settings">Settings</string>
+    <string name="cod_take_good_button_txt">收货确认</string>
+    <string name="cod_return_good_button_txt">退货确认</string>
+    <string name="goback_txt">返回</string>
+
+    <string name="entrance_customer">消费者入口</string>
+    <string name="entrance_deliver">快递员入口</string>
+    <string name="entrance_subtitle">请选择登陆账户类型</string>
+    
+    <string name="open_camera">扫描二维码</string>
+    <string name="scan_result">扫描结果</string>
+    <string name="input_txt_for_qrcode">  输入验证码</string>
+    <!-- <string name="generate_qrcode">生成二维码</string> -->
+    <string name="generate_qrcode">确认</string>
+    <string name="qrcode">二维码</string>
+    
+    <string name="cancel">取消</string>
+    <string name="comfirm">确定</string>
+    <string name="succeed">交易成功</string>
+    <string name="succeed_back">请按确定返回</string>
+    
+    <string name="str_id">运单号:</string>
+    <string name="str_name">品名:</string>
+    <string name="str_customer">收件人:</string>
+    <string name="str_to">收货地址:</string>
+    
+    <string name="str_name_re">计算机网络</string>
+    <string name="str_customer_re">罗清尹</string>
+    <string name="str_to_re">上海市上川路995号</string>
+    
+    <drawable name="color_normal">#304433</drawable>
+    <drawable name="color_pressed">#E8FF9D</drawable>
+    <string name="cash">现金</string>
+    <string name="creditcard">刷卡</string>
+    <string name="txt_save">保存</string>
+    <string name="please_input_password">请输入密码</string>
+
+</resources>

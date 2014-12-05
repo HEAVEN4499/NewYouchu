@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/darkgreen" >
+    	
+        <Button 
+            android:id="@+id/cod_barcode_goback_btn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn"
+            android:text="@string/goback_txt"
+            android:textColor="@color/darkgreen" />
+    	
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/btn_scan_barcode"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/commen_btn"
+        android:textColor="@color/white"
+        android:text="@string/open_camera" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp" >
+        
+        <TextView 
+       	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="@string/scan_result" />
+        
+        <TextView 
+        android:id="@+id/tv_scan_result"
+       	android:layout_width="fill_parent"
+       	android:textSize="18sp"
+       	android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp" >
+        
+    <EditText 
+        android:id="@+id/et_qr_string"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/white"
+        android:hint="@string/input_txt_for_qrcode"/>
+    
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btn_add_qrcode"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/commen_btn"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:textColor="@color/white"
+        android:text="@string/generate_qrcode" />
+    
+    <ImageView
+        android:id="@+id/iv_qr_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:contentDescription="@string/qrcode" />
+
+</LinearLayout>

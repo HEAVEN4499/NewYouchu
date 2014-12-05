@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    tools:context="com.shfc.youchu.CashOnDeliveryDeliverEntranceActivity" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/darkgreen" >
+    	
+        <Button 
+            android:id="@+id/cod_comfirm_goback_btn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn"
+            android:text="@string/goback_txt"
+            android:textColor="@color/darkgreen" />
+    	
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:textSize="50sp" 
+        android:textColor="@color/darkgreen"
+        android:text="@string/cash_on_delivery_welcome"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="100dp" />
+
+    <Button
+   	    android:id="@+id/cod_take_good_btn"
+   	    android:layout_width="170dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_marginBottom="30dp"
+   	    android:background="@drawable/roundbutton"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="visible"
+        android:layout_gravity="center_vertical|center_horizontal"
+   	    android:text="@string/cod_take_good_button_txt" />
+    
+    <Button
+   	    android:id="@+id/cod_return_good_btn"
+   	    android:layout_width="170dp"
+   	    android:layout_height="wrap_content"
+   	    android:background="@drawable/commen_btn"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="visible"
+        android:layout_gravity="center_vertical|center_horizontal"
+   	    android:text="@string/cod_return_good_button_txt" />
+    
+</LinearLayout>
