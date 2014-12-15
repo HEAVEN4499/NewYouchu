@@ -2,10 +2,18 @@ package com.shfc.youchu;
 
 import com.zxing.activity.CaptureActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Notification;
+import android.app.Notification.Builder;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -92,6 +100,7 @@ public class BarCodeTestActivity extends Activity {
 		});
     }
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -101,6 +110,26 @@ public class BarCodeTestActivity extends Activity {
 			String scanResult = bundle.getString("result");
 			resultTextView.setText(scanResult);
 			nextPage(purchaseType + scanResult);
+			
+			Intent rIntent = new Intent(context, CashOnDeliverySucessfulActivity.class);
+			TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+			stackBuilder.addParentStack(CashOnDeliverySucessfulActivity.class);
+			stackBuilder.addNextIntent(rIntent);
+			PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
+			
+			NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+			String noteTitle = "邮储到付";
+			Builder builder = new Notification.Builder(context);
+			builder.setContentIntent(pendingIntent)
+				.setSmallIcon(R.drawable.ic_launcher)
+				.setVibrate(new long[]{1000})
+				.setLights(Color.WHITE, 2000, 2000)
+				.setWhen(System.currentTimeMillis())
+				.setAutoCancel(true)
+				.setContentTitle(noteTitle)
+				.setContentText(scanResult);
+			Notification notification = builder.build();
+			nm.notify(1, notification);
 		}
 	}
 	
